@@ -1,0 +1,11 @@
+bud_Tr.py
+calc.py
+comp_num.py
+countd.py
+hello.py
+list.py
+name.txt
+newline.py
+pyramid.py
+quad.py
+shop_cart.py
