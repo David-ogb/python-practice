@@ -44,22 +44,6 @@ print(f"Average score: {sum(scores)/len(scores):.2f}")
 #function to calculate the grade
 def grade_sys(scores):
     for score in scores:
-        if  100 > score >= 90:
-            Grade = 'A'
-            return Grade
-        elif 89 >= score >= 80:
-            Grade = 'B'
-            return Grade
-        elif 79 >= score >= 70:
-            Grade = 'C'
-            return Grade
-        elif 69 >= score >= 60:
-            Grade = 'D'
-            return Grade
-        else:
-            Grade = 'F'
-            return Grade
-
-print()
+        
 for x in range(num_stud):
     print(f"{students[x]:5}:{scores[x]:4}")
