@@ -17,6 +17,20 @@
 60 - 69  : D
 Below 60 : F"""
 
+#function to calculate the grade
+def get_grade(num):
+    if 100 > num >= 90:  
+        return 'A' 
+    elif 89 >= num >= 80: 
+        return 'B'
+    elif 79 >= num >= 70: 
+        return 'C' 
+    elif 69 >= num >= 60: 
+        return 'D'
+    else: 
+        return 'F'    
+
+grades = []
 students = []
 scores = []
 #list the number of students
@@ -40,10 +54,9 @@ for x in range(num_stud): #number of students = number of times to run
 print(f"\nHighest score: {max(scores)}")
 print(f"Lowest score: {min(scores)}")
 print(f"Average score: {sum(scores)/len(scores):.2f}")
-
-#function to calculate the grade
-def grade_sys(scores):
-    for score in scores:
-        
+   
+# looping throught the numbers and getting the grades and adding them to the grades list.
 for x in range(num_stud):
-    print(f"{students[x]:5}:{scores[x]:4}")
+    grade = get_grade(scores[x])
+    grades.append(grade)
+    print (f"{students[x]}, {scores[x]}, {grades[x]}")
