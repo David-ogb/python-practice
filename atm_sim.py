@@ -1,7 +1,8 @@
-balance = 0
+balance = 10
 
 # to redo the programme
 def get_choice():
+    print(balance)
     user_input = int(input("1. Deposit\n2. Withdraw\n3. Check Balance\n4. Exit\nEnter an option to begin: "))
     # to exit the program
     while user_input <= 4:
@@ -38,10 +39,9 @@ def Withdraw():
 
 # function to display the menu
 def menu():
-    balance = 0
     user_input = int(input("1. Deposit\n2. Withdraw\n3. Check Balance\n4. Exit\nEnter an option to begin: "))
     # to exit the program
-    while user_input <= 4:
+    while True:
         try:
             if user_input == 4:
                 print('Thankyou for banking with us')
