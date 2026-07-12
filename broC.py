@@ -110,7 +110,153 @@ triples = [y ** 3 for y in range(1, 11)]
 
 print(triples)"""
 
-fruits = ["apples", "orange", "banana", "coconut"]
-fruits = [fruit.capitalize() for fruit in fruits]
+# fruits = ["apples", "orange", "banana", "coconut"]
+# fruits = [fruit.capitalize() for fruit in fruits]
 
-print(fruits)
+# print(fruits)
+
+# Modulers - a file with code you want to include in your program
+#              using import 
+
+
+# import exmod as egg
+
+# result = egg.pow(3, 4)
+# print(result)
+
+# variable scope - both visible and accessible
+# scope resolution - LEGB Local -> Enclosed --> Global -->Built-in
+
+# var in function is local
+
+# def main():
+#     # Yiur origran goes here
+
+
+# if __name__ == '__main__':
+#     main()
+
+
+# Banking program
+"""
+def show_balance(balance):
+    print(f"Your balance is ${balance:.2f}")
+
+def deposit():
+    amount = float(input("Enter an amount to be deposited: "))
+
+    if amount < 0:
+        print("That's not a valid amount")
+        return 0
+    else:
+        return amount
+def withdraw(balance):
+    amount = float(input("Enter amount to be withdrawn: "))
+
+    if amount > balance:
+        print("Insufficient funds")
+        return 0
+    elif amount < 0:
+        print ("amount must be greater than 0")
+        return 0
+    else:
+        return amount
+    
+def main():
+    balance = 0
+    is_running = True
+
+    while is_running:
+
+        print("************************\n")
+        print("BANKING PROGRAM\n")
+        print("************************")
+        choice = int(input("1. show balance\n2. Deposit\n3. Withdraw\n4. Exit\n************************\nEnter an option to begin: "))
+        
+
+        if choice == 1:
+            show_balance(balance)
+        elif choice == 2:
+            balance += deposit()
+        elif choice == 3:
+            balance -= withdraw(balance)
+        elif choice == 4:
+            is_running = False
+        else:
+            print("Enter a valid option")
+
+    print("Thankyou for banking with us!")
+
+if __name__ == '__main__':
+    main()
+"""
+
+
+# OOP
+#  object = a "bundle" of related attribute (variables) and methods(functions)
+            # E.g phone, cup, book
+            # You need a 'Class' to create many objects
+
+# class = blueprint to design an object
+
+# from car import Car
+
+# car1 = Car("Mustang",2025,"Black",True)
+# car2 = Car("Corvette", 2021, "blue", False)
+
+# car1.details()
+# car2.details()
+"""
+class Student:
+
+    class_year = 2025
+    num_students = 0
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        Student.num_students += 1
+        
+student1 = Student("David", 29)
+student2 = Student("Amos", "31")
+student3 = Student("James", 29)
+student4 = Student("Jennifer", "26")
+
+print(f"My graduating class of {Student.class_year} has {Student.num_students} students")
+print(student1.name)  
+print(student2.name)  
+print(student3.name)  """
+
+
+# Inheritance
+
+class Animal:
+    def __init__(self, name):
+        self.name = name
+        self.is_alive = True
+
+    def eat(self):
+        print(f"{self.name} is eating")
+
+    def sleep(self):
+        print(f"{self.name} is sleeping")
+
+class Dog(Animal):
+    pass
+
+class Cat(Animal):
+    pass
+
+class Mouse(Animal):
+    pass
+
+dog = Dog("Scobby")
+cat = Cat("garfield")
+mouse = Mouse("Mickey")
+
+print(cat.is_alive)
+cat.sleep()
+cat.eat()
+
+
+        

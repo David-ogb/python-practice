@@ -9,7 +9,7 @@ print("00.00 |  00.00 ")
 print("00.00 |  00.00 ")
 print()
 #giving the user options to take
-print("press 1 to enter income, 2 to enter expenses and 3 to exit program")
+print("press 1 to enter income,\n2 to enter expenses and \n3 to exit program")
 #action taken by the user
 act = int(input("What action would you like to take (1,2 or 3): "))
 

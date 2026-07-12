@@ -15,7 +15,7 @@
 # print(car1.brand, car1.model, car1.year, car1.color)
 
 
-class Person:
+"""class Person:
     def __init__(self, name, age, gender, tribe):
         self.name = name
         self.age = age
@@ -42,4 +42,22 @@ per3 = Person('Ada', 22, 'Female', 'Igbo')
 # print(per3)
 
 # per2.welcome()
-per.detail()
+per.detail()"""
+
+#Inheritance - a parent class and child class
+        # child class inherit from parent class
+
+class Person:
+    def __init__(self, fname, lname, age):
+        self.fname = fname
+        self.lname = lname
+        self.age = age
+
+per = Person('Mary', 'Adamu', 21)
+print(per.age)
+
+class Student(Person):
+    pass
+
+per1 = Student('John', 'Musa', 24)
+print(per1.fname, per1.lname, per1.age)

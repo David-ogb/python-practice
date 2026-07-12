@@ -21,13 +21,15 @@ else:
 
 # Pytho nwriting files (.txt, .json, .csv)
 
-txt_data = "Take out the president,\n Take out the other presidents,\n Take out bandits"
+# txt_data = "Take out the president,\n Take out the other presidents,\n Take out bandits"
 
-file_path = "/home/kali/Desktop/output.txt"
+# Create a list of three things you want to do 
 
-with open(file=file_path, mode="w") as file:
-    file.write(txt_data)
-    print(f"txt file '{file_path}' was created")
+ideas = ["Blow up the house of assembly", "Steal all the money I can", "Imprison Desmod Elliot"]
+
+file = open("ideas.txt", "r", encoding="utf-8") as f:
+for idea in ideas:
+    file.write(f"{idea}\n")
 
 
 

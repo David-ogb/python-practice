@@ -35,7 +35,7 @@ def error(message):
 # ----------- GETTING INPUT -----------
 
 def get_number(prompt):
-    """Ask for a number. Returns None if user quits."""
+    # Ask for a number. Returns None if user quits.
     while True:
         info("Enter (quit/q/exit/e) to cancel current operation")
         user_input = input(prompt)
@@ -112,7 +112,6 @@ def logarithm(number, base):
 
 def show_result(value1, value2, result, label1="num1", label2="num2"):
     dp = config["decimal_places"]
-
     print("\n===== RESULT =====")
     if value1 is not None:
         print(f"{label1} = {value1:.{dp}f}")
